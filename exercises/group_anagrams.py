@@ -24,17 +24,18 @@
 
 
 class Solution:
-    def groupAnagrams(self, strs):
-      anagrams = {}
-      for word in strs:
-        sorted_word = "".join(sorted(word))
-        #sorted is a built in method to sort
-        #sorted(word) will turn the "word" into a sorted array e.g. ['a', 'e', 't']
-        if sorted_word in anagrams:
-          anagrams[sorted_word].append(word)
-        else:
-           anagrams[sorted_word] = [word]
-      return list(anagrams.values())
+  def groupAnagrams(self, strs):
+    anagrams = {}
+    for word in strs:
+      sorted_word = "".join(sorted(word))
+      # sorted(word) will turn the "word" into a sorted array e.g. ['a', 'e', 't']
+      # "".join(sorted(word)) = ['a', 'e', 't'] => "aet"
+      if sorted_word in anagrams:
+        anagrams[sorted_word].append(word)
+      else:
+          anagrams[sorted_word] = [word]
+    return list(anagrams.values())
+    # to return a list(Array) must put list(the actual list of things)
            
            
     
