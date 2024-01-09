@@ -27,9 +27,11 @@
 def groupAnagrams(strs):
   anagrams = {}
   for word in strs:
+    import ipdb; ipdb.set_trace()
     sorted_word = "".join(sorted(word))
     # sorted(word) will turn the "word" into a sorted array e.g. ['a', 'e', 't']
     # "".join(sorted(word)) = ['a', 'e', 't'] => "aet"
+
     if sorted_word in anagrams:
       anagrams[sorted_word].append(word)
     else:
